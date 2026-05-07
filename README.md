@@ -1,6 +1,6 @@
 # 🎙️ PrepWise AI — AI Mock Interview Platform
 
-A futuristic AI-powered mock interview platform built with React, FastAPI, Three.js, and Gemini AI.
+A futuristic AI-powered mock interview platform built with React, FastAPI, Three.js, and Groq API.
 
 PrepWise AI helps users practice technical interviews with realistic AI-generated questions, voice interaction, instant feedback analysis, and downloadable interview reports.
 
@@ -36,7 +36,7 @@ PrepWise AI helps users practice technical interviews with realistic AI-generate
 
 * FastAPI
 * Python
-* Gemini API
+* Groq API
 
 ---
 
@@ -137,7 +137,7 @@ http://127.0.0.1:8000
 Create a `.env` file inside the backend folder.
 
 ```env
-GEMINI_API_KEY=your_api_key
+GROQ_API_KEY=your_api_key
 ```
 
 ---
@@ -181,3 +181,4 @@ This project is open source and available under the MIT License.
 Akshat Singh Rajput
 
 Frontend Developer | MERN Stack Developer
+
