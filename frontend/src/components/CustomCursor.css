@@ -1,0 +1,56 @@
+.custom-cursor {
+  width: 14px;
+  height: 14px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+  z-index: 9999;
+
+  background: white;
+
+  transition: width 0.2s ease, height 0.2s ease, border 0.2s ease,
+    background 0.2s ease, transform 0.08s ease-out;
+
+  mix-blend-mode: difference;
+}
+
+/* Hover state */
+.custom-cursor.expand {
+  width: 40px;
+  height: 40px;
+
+  background: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Hide default cursor */
+body,
+button,
+a,
+input,
+textarea {
+  cursor: none;
+}
+
+/* Mobile disable */
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
+
+  body,
+  button,
+  a,
+  input,
+  textarea {
+    cursor: auto;
+  }
+}
