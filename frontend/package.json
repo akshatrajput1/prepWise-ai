@@ -15,7 +15,6 @@
     "@splinetool/react-spline": "^4.1.0",
     "@splinetool/runtime": "^1.12.92",
     "@tailwindcss/vite": "^4.2.4",
-    "@tremor/react": "^3.18.7",
     "@tsparticles/react": "^3.0.0",
     "axios": "^1.16.0",
     "framer-motion": "^12.38.0",
