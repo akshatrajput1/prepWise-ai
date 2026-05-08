@@ -38,21 +38,15 @@ export const speakText = async (text) => {
 
     const blob = await response.blob();
 
-    console.log(blob);
-
-    const audioUrl = window.URL.createObjectURL(blob);
+    const audioUrl = URL.createObjectURL(blob);
 
     const audio = new Audio(audioUrl);
 
     audio.volume = 1;
 
-    audio.oncanplaythrough = async () => {
-      try {
-        await audio.play();
-      } catch (err) {
-        console.log("PLAY ERROR:", err);
-      }
-    };
+    await audio.play();
+
+    console.log("VOICE PLAYING");
   } catch (error) {
     console.log("VOICE ERROR:", error);
   }
