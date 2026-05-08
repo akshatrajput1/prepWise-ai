@@ -21,14 +21,10 @@ export const speakText = async (text) => {
   try {
     const response = await fetch(`${BASE_URL}/speak`, {
       method: "POST",
-
       headers: {
         "Content-Type": "application/json",
       },
-
-      body: JSON.stringify({
-        text,
-      }),
+      body: JSON.stringify({ text }),
     });
 
     if (!response.ok) {
@@ -40,9 +36,13 @@ export const speakText = async (text) => {
 
     const audioUrl = URL.createObjectURL(blob);
 
-    const audio = new Audio(audioUrl);
+    const audio = document.createElement("audio");
 
-    audio.volume = 1;
+    audio.src = audioUrl;
+    audio.autoplay = true;
+    audio.controls = false;
+
+    document.body.appendChild(audio);
 
     await audio.play();
 
